@@ -1,7 +1,0 @@
- 
-.conda/ 
-.env/
-.conda/
-__pycache__/
-*.pyc
-.env
