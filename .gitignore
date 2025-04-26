@@ -12,4 +12,4 @@ __pycache__/
 
 # Vector store data
 "data/vector_store/"
-data/vector_store/
+data/vector_store/".env" 
