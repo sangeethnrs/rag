@@ -1,8 +1,15 @@
- 
-.conda/ 
-.env/
+# Python virtual environments
 .conda/
+.env/
+
+# Environment variables
+.env
+".env"
+
+# Python cache files
 __pycache__/
 *.pyc
-.env".env" 
-"data/vector_store/" 
+
+# Vector store data
+"data/vector_store/"
+data/vector_store/
