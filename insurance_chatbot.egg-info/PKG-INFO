@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: insurance-chatbot
+Version: 0.1
+Requires-Dist: pdfplumber
+Requires-Dist: langchain
+Requires-Dist: python-dotenv
+Requires-Dist: faiss-cpu
+Dynamic: requires-dist

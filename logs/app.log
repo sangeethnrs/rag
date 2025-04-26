@@ -1,0 +1,89 @@
+2025-04-26 20:53:06,260 - src.utils.helpers - INFO - Starting document processing...
+2025-04-26 20:53:06,260 - src.utils.helpers - ERROR - Error in processing: name 'Path' is not defined
+2025-04-26 20:59:37,700 - src.utils.helpers - INFO - Starting document processing...
+2025-04-26 20:59:51,383 - src.utils.helpers - INFO - extract_text_from_pdf took 13.68 seconds to execute
+2025-04-26 20:59:51,383 - src.utils.helpers - INFO - Processed D:\RAG\data\raw\auto\icici\private-car-package-policy-wording.pdf
+2025-04-26 20:59:54,795 - src.utils.helpers - INFO - extract_text_from_pdf took 3.41 seconds to execute
+2025-04-26 20:59:54,795 - src.utils.helpers - INFO - Processed D:\RAG\data\raw\auto\tata\Auto_Secure_Private_Car_Package_Base_Policy_Wording_31ed1ddc55.pdf
+2025-04-26 21:00:01,037 - src.utils.helpers - INFO - extract_text_from_pdf took 6.24 seconds to execute
+2025-04-26 21:00:01,037 - src.utils.helpers - INFO - Processed D:\RAG\data\raw\health\icici\health-care.pdf
+2025-04-26 21:00:08,618 - src.utils.helpers - INFO - extract_text_from_pdf took 7.58 seconds to execute
+2025-04-26 21:00:08,618 - src.utils.helpers - INFO - Processed D:\RAG\data\raw\health\tata\Tata_AIG_Medi_Care.pdf
+2025-04-26 21:00:08,618 - src.utils.helpers - INFO - process_documents took 30.92 seconds to execute
+2025-04-26 21:00:08,618 - src.utils.helpers - INFO - Processed 4 documents
+2025-04-26 21:00:08,618 - src.utils.helpers - INFO - Splitting documents into chunks...
+2025-04-26 21:00:08,644 - src.utils.helpers - INFO - Created 586 chunks from documents
+2025-04-26 21:00:08,645 - src.utils.helpers - INFO - split_documents took 0.03 seconds to execute
+2025-04-26 21:00:08,645 - src.utils.helpers - INFO - Created 586 chunks
+2025-04-26 21:07:12,582 - src.utils.helpers - INFO - Starting document processing...
+2025-04-26 21:07:25,779 - src.utils.helpers - INFO - extract_text_from_pdf took 13.20 seconds to execute
+2025-04-26 21:07:25,779 - src.utils.helpers - INFO - Processed D:\RAG\data\raw\auto\icici\private-car-package-policy-wording.pdf
+2025-04-26 21:07:29,061 - src.utils.helpers - INFO - extract_text_from_pdf took 3.28 seconds to execute
+2025-04-26 21:07:29,061 - src.utils.helpers - INFO - Processed D:\RAG\data\raw\auto\tata\Auto_Secure_Private_Car_Package_Base_Policy_Wording_31ed1ddc55.pdf
+2025-04-26 21:07:35,439 - src.utils.helpers - INFO - extract_text_from_pdf took 6.37 seconds to execute
+2025-04-26 21:07:35,439 - src.utils.helpers - INFO - Processed D:\RAG\data\raw\health\icici\health-care.pdf
+2025-04-26 21:07:43,099 - src.utils.helpers - INFO - extract_text_from_pdf took 7.66 seconds to execute
+2025-04-26 21:07:43,099 - src.utils.helpers - INFO - Processed D:\RAG\data\raw\health\tata\Tata_AIG_Medi_Care.pdf
+2025-04-26 21:07:43,099 - src.utils.helpers - INFO - process_documents took 30.52 seconds to execute
+2025-04-26 21:07:43,099 - src.utils.helpers - INFO - Processed 4 documents
+2025-04-26 21:07:43,099 - src.utils.helpers - INFO - Splitting documents into chunks...
+2025-04-26 21:07:43,114 - src.utils.helpers - INFO - Created 635 chunks from documents
+2025-04-26 21:07:43,114 - src.utils.helpers - INFO - split_documents took 0.01 seconds to execute
+2025-04-26 21:07:43,131 - src.utils.helpers - INFO - Saved processed data to data/processed/policy_chunks.json
+2025-04-26 21:07:43,132 - src.utils.helpers - INFO - Chunks by section:
+2025-04-26 21:07:43,132 - src.utils.helpers - INFO - - definitions: 46 chunks
+2025-04-26 21:07:43,132 - src.utils.helpers - INFO - - coverage: 264 chunks
+2025-04-26 21:07:43,133 - src.utils.helpers - INFO - - exclusions: 223 chunks
+2025-04-26 21:07:43,133 - src.utils.helpers - INFO - - conditions: 37 chunks
+2025-04-26 21:07:43,133 - src.utils.helpers - INFO - - claims: 64 chunks
+2025-04-26 21:07:43,134 - src.utils.helpers - INFO - - general: 1 chunks
+2025-04-26 21:26:27,461 - src.utils.helpers - ERROR - Error building vector store: 1 validation error for OpenAIEmbeddings
+__root__
+  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)
+2025-04-26 22:28:19,686 - src.utils.helpers - ERROR - Error building vector store: 1 validation error for OpenAIEmbeddings
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2025-04-26 22:47:08,927 - src.utils.helpers - INFO - Creating vector store with 635 chunks...
+2025-04-26 22:47:16,743 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 22:47:19,066 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-26 22:47:19,066 - faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2025-04-26 22:47:19,066 - faiss.loader - INFO - Loading faiss.
+2025-04-26 22:47:19,209 - src.utils.helpers - ERROR - Error creating vector store: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+2025-04-26 22:47:19,209 - src.utils.helpers - ERROR - Error building vector store: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+2025-04-26 23:16:35,611 - src.utils.helpers - INFO - Creating vector store with 635 chunks...
+2025-04-26 23:16:37,927 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:16:39,211 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-26 23:16:39,232 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-26 23:16:39,242 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-26 23:16:40,885 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:16:42,125 - src.utils.helpers - INFO - Processed 200/635 chunks
+2025-04-26 23:16:43,833 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:16:45,121 - src.utils.helpers - INFO - Processed 300/635 chunks
+2025-04-26 23:16:46,203 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:16:47,401 - src.utils.helpers - INFO - Processed 400/635 chunks
+2025-04-26 23:16:49,801 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:16:51,120 - src.utils.helpers - INFO - Processed 500/635 chunks
+2025-04-26 23:16:51,832 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:16:52,872 - src.utils.helpers - INFO - Processed 600/635 chunks
+2025-04-26 23:16:53,762 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:16:53,829 - src.utils.helpers - INFO - Processed 635/635 chunks
+2025-04-26 23:16:54,001 - src.utils.helpers - INFO - Vector store created and saved to D:\RAG\data\vector_store\faiss_store
+2025-04-26 23:16:54,001 - src.utils.helpers - INFO - create_vector_store took 18.39 seconds to execute
+2025-04-26 23:26:14,757 - src.utils.helpers - ERROR - Error loading vector store: The de-serialization relies loading a pickle file. Pickle files can be modified to deliver a malicious payload that results in execution of arbitrary code on your machine.You will need to set `allow_dangerous_deserialization` to `True` to enable deserialization. If you do this, make sure that you trust the source of the data. For example, if you are loading a file that you created, and know that no one else has modified the file, then this is safe to do. Do not set this to `True` if you are loading a file from an untrusted source (e.g., some random site on the internet.).
+2025-04-26 23:26:14,757 - src.utils.helpers - ERROR - Error testing vector store: The de-serialization relies loading a pickle file. Pickle files can be modified to deliver a malicious payload that results in execution of arbitrary code on your machine.You will need to set `allow_dangerous_deserialization` to `True` to enable deserialization. If you do this, make sure that you trust the source of the data. For example, if you are loading a file that you created, and know that no one else has modified the file, then this is safe to do. Do not set this to `True` if you are loading a file from an untrusted source (e.g., some random site on the internet.).
+2025-04-26 23:28:25,301 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-26 23:28:25,325 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-26 23:28:25,329 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-26 23:28:25,361 - src.utils.helpers - INFO - Vector store loaded successfully
+2025-04-26 23:28:25,361 - src.utils.helpers - INFO - 
+=== Vector Store Test Results ===
+2025-04-26 23:28:27,208 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:28:28,312 - src.utils.helpers - INFO - --------------------------------------------------------------------------------
+2025-04-26 23:28:28,312 - src.utils.helpers - INFO - --------------------------------------------------------------------------------
+2025-04-26 23:28:29,104 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:28:29,530 - src.utils.helpers - INFO - --------------------------------------------------------------------------------
+2025-04-26 23:28:29,552 - src.utils.helpers - INFO - --------------------------------------------------------------------------------
+2025-04-26 23:28:30,558 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-26 23:28:31,147 - src.utils.helpers - INFO - --------------------------------------------------------------------------------
+2025-04-26 23:28:31,147 - src.utils.helpers - INFO - --------------------------------------------------------------------------------

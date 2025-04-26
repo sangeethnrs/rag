@@ -1,0 +1,4 @@
+pdfplumber
+langchain
+python-dotenv
+faiss-cpu
