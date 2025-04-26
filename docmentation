@@ -1,0 +1,46 @@
+conda create -n rag python=3.10
+conda activate rag
+
+
+insurance_documents/
+├── auto/
+│   ├── icici/
+│   │   └── private-car-package-policy-wording.pdf
+│   └── tata/
+│       └── Auto_Secure_Private_Car_Package_Base_Policy_Wording_31ed1ddc55.pdf
+└── health/
+    ├── icici/
+    │   └── health-care.pdf
+    └── tata/
+        └── Tata_AIG_Medi_Care.pdf
+
+
+
+
+insurance-chatbot/
+├── data/
+│   ├── raw/                 # Your original PDFs (current structure)
+│   ├── processed/           # JSON outputs
+│   └── embeddings/          # Vector database files
+├── src/
+│   ├── extraction/          # PDF processing code
+│   │   ├── __init__.py
+│   │   ├── pdf_extractor.py
+│   │   └── text_processor.py
+│   ├── database/            # Knowledge base code
+│   │   ├── __init__.py
+│   │   ├── schema.py
+│   │   └── vector_store.py
+│   ├── api/                 # API for chatbot
+│   │   ├── __init__.py
+│   │   └── knowledge_api.py
+│   └── utils/               # Utility functions
+│       ├── __init__.py
+│       └── helpers.py
+├── notebooks/               # Jupyter notebooks for exploration
+├── tests/                   # Test cases
+├── config.py                # Configuration settings
+├── main.py                  # Main execution script
+└── requirements.txt         # Dependencies
+
+
